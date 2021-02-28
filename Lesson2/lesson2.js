@@ -54,11 +54,30 @@ if (a >= 0 && b >= 0) {
         case 14: return getRecursion(a + 1) + ' ' + a; 
         case 15: return '15'; 
         default: return 'Null';
-            break;
     }
 }
 console.log(getRecursion(+prompt('Задайте число от 0 до 15: ')));  */
 
+
+let a = (+prompt('Задайте число от 0 до 15: '));
+switch (a){
+    case 0: console.log (a++); 
+    case 1: console.log (a++); 
+    case 2: console.log (a++); 
+    case 3: console.log (a++); 
+    case 4: console.log (a++); 
+    case 5: console.log (a++); 
+    case 6: console.log (a++); 
+    case 7: console.log (a++); 
+    case 8: console.log (a++); 
+    case 9: console.log (a++); 
+    case 10: console.log (a++); 
+    case 11: console.log (a++);
+    case 12: console.log (a++); 
+    case 13: console.log (a++); 
+    case 14: console.log (a++); 
+    case 15: console.log (a++);
+}
 
 // 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
 
@@ -74,24 +93,38 @@ arg1 * arg2 = ${mathMultiplication}\n
 arg1 / arg2 = ${mathDivision}` );
 }
 getmathOperation( +prompt('Введите arg1'),+prompt('Введите arg2')); */
-
+let x = +prompt('Введите x'),
+    y = +prompt('Введите y');
+function mathSumm(x, y){
+    return x + y;
+}
+function mathSubtraction(x, y){
+    return x - y;
+}
+function mathMultiplication(x, y){
+    return x * y;
+}
+function mathDivision(x, y){
+    return x / y;
+}
+console.log('x + y =' + mathSumm(x,y));
+console.log('x - y =' + mathSubtraction(x,y));
+console.log('x * y =' + mathMultiplication(x,y));
+console.log('x / y =' + mathDivision(x,y));
 
 
 /* 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch). */
-/* 
+
 function getmathOperation(arg1 = 1 , arg2 = 1, operation) {
     switch(operation){
-        case 1: return console.log(`arg1 + arg2 = ${arg1 + arg2}`);
-        case 2: return console.log(`arg1 - arg2 = ${arg1 - arg2}`);
-        case 3: return console.log(`arg1 * arg2 = ${arg1 * arg2}`);
-        case 4: return console.log(`arg1 / arg2 = ${arg1 / arg2}`);
+        case 1: return mathSumm(arg1,arg2);
+        case 2: return mathSubtraction(arg1,arg2);
+        case 3: return mathMultiplication(arg1,arg2);
+        case 4: return mathDivision(arg1,arg2);
         default: return console.log('такой операции незадано'); 
-            break;
-
     }
 }
-getmathOperation( +prompt('Введите arg1'), +prompt('Введите arg2'), +prompt('введите номер операции, где 1 - сумма, 2 - вычитание, 3 - умножение, 4 - деление')); */
-
+console.log(getmathOperation( +prompt('Введите arg1'), +prompt('Введите arg2'), +prompt('введите номер операции, где 1 - сумма, 2 - вычитание, 3 - умножение, 4 - деление')));
 
 // 7. *Сравнить null и 0. Попробуйте объяснить результат.
 
