@@ -26,12 +26,15 @@ const cart = [
     ['item3', 150 , 3],
     ['item4', 200 , 2],
 ];
-for (let i = 0; i < cart.length; i++){
-    console.log(cart[i][i]);
-       
-} 
-
-
+function cartCountPrice(cart)
+{
+    let totalPrice = 0;
+    for (let i = 0; i < cart.length; i++){
+        totalPrice += cart[i][1] * cart[i][2];
+    }
+    return totalPrice;
+}
+console.log(cartCountPrice(cart));
 
 
 /* 3.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
@@ -43,3 +46,11 @@ for (let g = 0; g < 10; console.log (g++)){
 
 
 /*  *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5: */
+
+let str = '';
+for (let i = 0; i < 20; i++) 
+{
+	str += 'x';
+    console.log(str); 
+}
+
